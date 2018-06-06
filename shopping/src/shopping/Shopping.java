@@ -231,22 +231,18 @@ public class Shopping {
 			break;
 			case 3: Books();
 			break;
-                        case 4: Sports();
-                        break;
+             case 4: Sports();
+             break;
 			case 5: Bill();
                         break;
                         default:System.out.println("Invalid choice! Try again");
                         
 			}
-		}while(choice!=4);
+		}while(choice!=5);
 
 	}
 
-   private static class shopping {
-
-       public shopping() {
-        }
-    }
+   
 
     
    }

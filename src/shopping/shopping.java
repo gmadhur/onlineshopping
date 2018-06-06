@@ -144,6 +144,47 @@ public class shopping {
 		}while(pro!=3);
 		
 	}
+
+	/**
+	*Function for categories of sports
+	*/
+
+
+public static void Sports() {
+int pro, qty,amt1;
+Scanner s1 = new Scanner(System.in);
+System.out.println("          SPORTS    ");
+System.out.println("      WELLCOME         "+name);
+do {
+	/**
+	*Display the Sports  menu
+	*/
+System.out.println("1.Football  = 100/-\n2.Badminton = 1000/-\n3.Exit ");
+	/**
+	*Accept input of the item from user
+	*/
+System.out.println("Enter the product");
+pro = s1.nextInt();
+if(pro==3)
+	return;
+	/**
+	*Accept input quantity from the user 
+	*/
+System.out.println("Enter the quantity");
+qty=s1.nextInt();
+if(pro==1)
+{
+	amt1=qty*100;
+	amt=amt+amt1;
+}
+else
+{
+	amt1=qty*1000;
+	amt=amt+amt1;
+}
+}while(pro!=3);
+
+}
 			/**
 			*Billing function
 			*/
@@ -177,7 +218,7 @@ public class shopping {
 			/**
 			*Display the various categories of the shop
 			*/
-			System.out.println("1.Electronics\n 2.Fashion\n 3.Books\n 4.Bill");
+			System.out.println("1.Electronics\n 2.Fashion\n 3.Books\n 4.Sports\n 5.Bill");
 			System.out.println("Enter your choice");
 			choice=s.nextInt();
 			switch(choice)
@@ -188,9 +229,12 @@ public class shopping {
 			break;
 			case 3: Books();
 			break;
-			case 4: Bill();
+			case 4: Sports();
+			break;
+			case 5: Bill();
+			break;
 			}
-		}while(choice!=4);
+		}while(choice!=5);
 
 	}
 
