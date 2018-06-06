@@ -4,10 +4,7 @@
 package shopping;
 
 import java.util.Scanner;
-/**
- * @author Lenovo
- *
- */
+
 public class shopping {
 
 	/**
@@ -15,19 +12,35 @@ public class shopping {
 	 */
 	static int custno,amt;
 	static String name;
+	/**
+	*Array of objects
+	*/
 	shopping[] c= new shopping[5];
+	
+			/**
+			*Function for Electronics category
+			*/
 	public static void Electronics() {
 		int pro, qty,amt1;
 		Scanner s1 = new Scanner(System.in);
 		System.out.println("          ELECTRONICS     ");
 		System.out.println("      WELCOME         "+name);
 		do {
+			/**
+			*Display the Electronics menu
+			*/
 		System.out.println("1.mobile  = 100/-\n2.Laptop  = 1000/-\n3.exit ");
-		System.out.println("enter your choice:");
+			/**
+			*Accept input of the item from user
+			*/
+		System.out.println("Enter your choice:");
 		pro = s1.nextInt();
 		if(pro==3)
 			return;
-		System.out.println("enter the quantity");
+			/**
+			*Accept input quantity from the user 
+			*/
+		System.out.println("Enter the quantity");
 		qty=s1.nextInt();
 		if(pro==1)
 		{
@@ -49,6 +62,10 @@ public class shopping {
 		
 		
 	}
+	
+			/**
+			*Function for Category of clothing and fashion 
+			*/
 	public static void Fashion() {
 		int pro, qty,amt1;
 		int i;
@@ -57,12 +74,21 @@ public class shopping {
 		System.out.println("          FASHION    ");
 		System.out.println("      WELLCOME         "+name);
 		do {
-		System.out.println("1.shirt  = 100/-\n2.pant  = 1000/-\n 3.exit");
-		System.out.println("enter the product");
+			/**
+			*Display the Fashion  menu
+			*/
+		System.out.println("1.Shirt  = 100/-\n2.Pant  = 1000/-\n 3.exit");
+			/**
+			*Accept input of the item from user
+			*/
+		System.out.println("Enter the product");
 		pro = s1.nextInt();
 		if(pro==3)
 			return;
-		System.out.println("enter the quantity");
+			/**
+			*Accept input quantity from the user 
+			*/
+		System.out.println("Enter the quantity");
 		qty=s1.nextInt();
 		if(pro==1)
 		{
@@ -78,18 +104,32 @@ public class shopping {
 		}while(pro!=3);
 		
 	}
+	
+			/**
+			*Function for categories of books
+			*/
+	
 	public static void Books() {
 		int pro, qty,amt1;
 		Scanner s1 = new Scanner(System.in);
 		System.out.println("          BOOKS    ");
 		System.out.println("      WELLCOME         "+name);
 		do {
+			/**
+			*Display the Fashion  menu
+			*/
 		System.out.println("1.ABCD  = 100/-\n2.NOPQ = 1000/-\n3.exit ");
-		System.out.println("enter the product");
+			/**
+			*Accept input of the item from user
+			*/
+		System.out.println("Enter the product");
 		pro = s1.nextInt();
 		if(pro==3)
 			return;
-		System.out.println("enter the quantity");
+			/**
+			*Accept input quantity from the user 
+			*/
+		System.out.println("Enter the quantity");
 		qty=s1.nextInt();
 		if(pro==1)
 		{
@@ -104,26 +144,41 @@ public class shopping {
 		}while(pro!=3);
 		
 	}
+			/**
+			*Billing function
+			*/
 	public static void Bill() {
+			/**
+			*Display the Name and Customer number
+			*/
 	System.out.println("NAME:"+name+ "\tCUST No:"+custno);
-	
+			/**
+			*Display the total price
+			*/
 	System.out.println("\n\ntotal amount is "+amt+"Rs");
 	
 	
 	}
+	
+			/**
+			*Main function
+			*/
 	public static void main(String[] args) {
 		int choice;
 		
 		shopping[] c = new shopping[5];
 		Scanner s=new Scanner(System.in);
 		Scanner s2=new Scanner(System.in);
-		System.out.println("enter your custno");
+		System.out.println("Enter your custno");
 		custno=s.nextInt();
-		System.out.println("enter your name ");
+		System.out.println("Enter your name ");
 		name=s2.next();
 		do {
+			/**
+			*Display the various categories of the shop
+			*/
 			System.out.println("1.Electronics\n 2.Fashion\n 3.Books\n 4.Bill");
-			System.out.println("enter your choice");
+			System.out.println("Enter your choice");
 			choice=s.nextInt();
 			switch(choice)
 			{
