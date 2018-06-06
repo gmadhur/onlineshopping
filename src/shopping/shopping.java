@@ -187,8 +187,9 @@ else
 }
 			/**
 			*Billing function
+			 * @return 
 			*/
-	public static void Bill() {
+	public static int Bill() {
 			/**
 			*Display the Name and Customer number
 			*/
@@ -198,7 +199,7 @@ else
 			*/
 	System.out.println("\n\ntotal amount is "+amt+"Rs");
 	
-	
+	return 0;
 	}
 	
 			/**
