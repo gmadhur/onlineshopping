@@ -143,6 +143,9 @@ public class Shopping {
 		
 	}
         
+			/**
+			*Function for categories of sports
+			*/
         
         
         public static void Sports() {
@@ -231,6 +234,8 @@ public class Shopping {
                         case 4: Sports();
                         break;
 			case 5: Bill();
+                        break;
+                        default:System.out.println("Invalid choice! Try again");
                         
 			}
 		}while(choice!=4);
