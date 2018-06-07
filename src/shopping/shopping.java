@@ -10,7 +10,7 @@ public class shopping {
 	/**
 	 * @param args
 	 */
-	static int custno,amt;
+	static int custno,amt=0;
 	static String name;
 	/**
 	*Array of objects
@@ -64,10 +64,10 @@ public class shopping {
 	}
 	
 			/**
-			*Function for Category of  fashion i
+			*Function for Category of  fashion 
 			*/
 	public static void Fashion() {
-		int pro = 0, qty,amt1;
+		int pro = 0, qty=0,amt1=0;
 		int i;
 		
 		Scanner s1 = new Scanner(System.in);
@@ -78,7 +78,7 @@ public class shopping {
 			*Display the Fashion  menu
 			*/
 			
-			System.out.println("1.Women's fashion   2.Men's fashion");
+			System.out.println("1.Women's fashion   2.Men's fashion    3.exit");
 			int ch = s1.nextInt();
 			switch(ch)
 			{
@@ -96,13 +96,13 @@ public class shopping {
 						amt=amt+amt1;
 						
 					}
-					if(pro==2)
+					else if(pro==2)
 					{
 						amt1=qty*1500;
 						amt=amt+amt1;
 						
 					}
-					else
+					else if(pro==3)
 					{
 						amt1=qty*1000;
 						amt=amt+amt1;
@@ -135,6 +135,7 @@ public class shopping {
 						amt=amt+amt1;
 					}
 					break;
+			case 3:return;		
 					
 			default : System.out.println("Enter a valid choice !  ");
 						break;
