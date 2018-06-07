@@ -67,7 +67,7 @@ public class shopping {
 			*Function for Category of clothing and fashion 
 			*/
 	public static void Fashion() {
-		int pro, qty,amt1;
+		int pro = 0, qty,amt1;
 		int i;
 		
 		Scanner s1 = new Scanner(System.in);
@@ -77,31 +77,74 @@ public class shopping {
 			/**
 			*Display the Fashion  menu
 			*/
-		System.out.println("1.Shirt  = 100/-\n2.Pant  = 1000/-\n 3.exit");
-			/**
-			*Accept input of the item from user
-			*/
-		System.out.println("Enter the product");
-		pro = s1.nextInt();
-		if(pro==3)
-			return;
-			/**
-			*Accept input quantity from the user 
-			*/
-		System.out.println("Enter the quantity");
-		qty=s1.nextInt();
-		if(pro==1)
-		{
-			amt1=qty*100;
-			amt=amt+amt1;
 			
-		}
-		else
-		{
-			amt1=qty*1000;
-			amt=amt+amt1;
-		}
-		}while(pro!=3);
+			System.out.println("1.Women's fashion   2.Men's fashion");
+			int ch = s1.nextInt();
+			switch(ch)
+			{
+			case 1: System.out.println("Welcome to women's fashion !");
+					System.out.println("1.Ethnic wear - 3500/- 2.Western wear - 1500/- 3.Bottom wear - 1000/-   4.exit ");
+					System.out.println("Enter the product : ");
+					 pro = s1.nextInt();
+					if(pro==4)
+						return;
+					System.out.println("Enter the quantity : ");
+					qty=s1.nextInt();
+					if(pro==1)
+					{
+						amt1=qty*3500;
+						amt=amt+amt1;
+						
+					}
+					if(pro==2)
+					{
+						amt1=qty*1500;
+						amt=amt+amt1;
+						
+					}
+					else
+					{
+						amt1=qty*1000;
+						amt=amt+amt1;
+					}
+					break;
+					
+			case 2:  System.out.println("Welcome to men's fashion !");
+					System.out.println("1.Shirt - 1500/- 2.Jacket - 2500/- 3.Bottom wear - 1000/-   4.exit ");
+					System.out.println("Enter the product : ");
+					pro = s1.nextInt();
+					if(pro==4)
+						return;
+					System.out.println("Enter the quantity : ");
+					qty=s1.nextInt();
+					if(pro==1)
+					{
+						amt1=qty*1500;
+						amt=amt+amt1;
+				
+					}
+					if(pro==2)
+					{
+						amt1=qty*2500;
+						amt=amt+amt1;
+				
+					}
+					else
+					{
+						amt1=qty*1000;
+						amt=amt+amt1;
+					}
+					break;
+					
+			default : System.out.println("Enter a valid choice !  ");
+						break;
+			 
+					
+			}
+			
+			
+
+		}while(pro!=4);
 		
 	}
 	
@@ -173,6 +216,7 @@ if(pro==3)
 System.out.println("Enter the quantity");
 qty=s1.nextInt();
 if(pro==1)
+
 {
 	amt1=qty*100;
 	amt=amt+amt1;
