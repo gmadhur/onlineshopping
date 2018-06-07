@@ -64,7 +64,7 @@ public class shopping {
 	}
 	
 			/**
-			*Function for Category of clothing and fashion 
+			*Function for Category of clothing and fashion includes men and womens section 
 			*/
 	public static void Fashion() {
 		int pro = 0, qty,amt1;
