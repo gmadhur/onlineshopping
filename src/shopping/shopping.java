@@ -29,7 +29,7 @@ public class shopping {
 			/**
 			*Display the Electronics menu
 			*/
-		System.out.println("1.mobile  = 100/-\n2.Laptop  = 1000/-\n3.exit ");
+		System.out.println("1.mobile  = 5000/-\n2.Laptop  = 20000/-\n3.exit ");
 			/**
 			*Accept input of the item from user
 			*/
@@ -44,13 +44,13 @@ public class shopping {
 		qty=s1.nextInt();
 		if(pro==1)
 		{
-			amt1=qty*100;
+			amt1=qty*5000;
 			amt=amt+amt1;
 			
 		}
 		else
 		{
-			amt1=qty*1000;
+			amt1=qty*20000;
 			amt=amt+amt1;
 		}
 		}while(pro!=3);
