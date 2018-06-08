@@ -10,7 +10,8 @@ public class shopping {
 	/**
 	 * @param args
 	 */
-	static int custno,amt=0;
+	static int custno;
+	static long amt=0;
 	static String name;
 	/**
 	*Array of objects
@@ -21,39 +22,87 @@ public class shopping {
 			*Function for Electronics category
 			*/
 	public static void Electronics() {
-		int pro, qty,amt1;
+		int pro = 0, qty=0,amt1=0;
+		int i;
+		
 		Scanner s1 = new Scanner(System.in);
-		System.out.println("          ELECTRONICS     ");
-		System.out.println("      WELCOME         "+name);
+		System.out.println("          FASHION    ");
+		System.out.println("      WELLCOME         "+name);
 		do {
 			/**
-			*Display the Electronics menu
+			*Display the Electronics  menu
 			*/
-		System.out.println("1.mobile  = 5000/-\n2.Laptop  = 20000/-\n3.exit ");
-			/**
-			*Accept input of the item from user
-			*/
-		System.out.println("Enter your choice:");
-		pro = s1.nextInt();
-		if(pro==3)
-			return;
-			/**
-			*Accept input quantity from the user 
-			*/
-		System.out.println("Enter the quantity");
-		qty=s1.nextInt();
-		if(pro==1)
-		{
-			amt1=qty*5000;
-			amt=amt+amt1;
 			
+			System.out.println("1.Mobile   2.Laptop   3.exit");
+			int ch = s1.nextInt();
+			switch(ch)
+			{
+			case 1: System.out.println("Welcome to mobile section !");
+					System.out.println("1.Moto - 35000/- 2.lenovo - 15000/- 3.Nokia - 10000/-   4.exit ");
+					System.out.println("Enter the product : ");
+					 pro = s1.nextInt();
+					if(pro==4)
+						return;
+					System.out.println("Enter the quantity : ");
+					qty=s1.nextInt();
+					if(pro==1)
+					{
+						amt1=qty*35000;
+						amt=amt+amt1;
+						
+					}
+					else if(pro==2)
+					{
+						amt1=qty*15000;
+						amt=amt+amt1;
+						
+					}
+					else if(pro==3)
+					{
+						amt1=qty*10000;
+						amt=amt+amt1;
+					}
+					break;
+					
+			case 2:  System.out.println("Welcome to Laptop section!");
+					System.out.println("1.Lenovo - 35000/- 2.Dell - 25000/- 3.Acer- 50000/-   4.exit ");
+					System.out.println("Enter the product : ");
+					pro = s1.nextInt();
+					if(pro==4)
+						return;
+					System.out.println("Enter the quantity : ");
+					qty=s1.nextInt();
+					if(pro==1)
+					{
+						amt1=qty*35000;
+						amt=amt+amt1;
+				
+					}
+					if(pro==2)
+					{
+						amt1=qty*25000;
+						amt=amt+amt1;
+				
+					}
+					else
+					{
+						amt1=qty*50000;
+						amt=amt+amt1;
+					}
+					break;
+			case 3:return;		
+					
+			default : System.out.println("Enter a valid choice !  ");
+						break;
+			 
+					
+			}
+			
+			
+
+		}while(pro!=4);
+		 
 		}
-		else
-		{
-			amt1=qty*20000;
-			amt=amt+amt1;
-		}
-		}while(pro!=3);
 		
 		
 		
@@ -61,7 +110,7 @@ public class shopping {
 		
 		
 		
-	}
+		
 	
 			/**
 			*Function for Category of  fashion 
