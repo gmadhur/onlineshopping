@@ -65,7 +65,7 @@ public class shopping {
 					break;
 					
 			case 2:  System.out.println("Welcome to Laptop section!");
-					System.out.println("1.Lenovo - 35000/- 2.Dell - 25000/- 3.Acer- 50000/-   4.exit ");
+					System.out.println("1.Lenovo - 30000/- 2.Dell - 25000/- 3.Acer- 50000/-   4.exit ");
 					System.out.println("Enter the product : ");
 					pro = s1.nextInt();
 					if(pro==4)
@@ -74,17 +74,17 @@ public class shopping {
 					qty=s1.nextInt();
 					if(pro==1)
 					{
-						amt1=qty*35000;
+						amt1=qty*30000;
 						amt=amt+amt1;
 				
 					}
-					if(pro==2)
+					else if(pro==2)
 					{
 						amt1=qty*25000;
 						amt=amt+amt1;
 				
 					}
-					else
+					else if(pro==3)
 					{
 						amt1=qty*50000;
 						amt=amt+amt1;
@@ -292,6 +292,7 @@ else
 			*Display the total price
 			*/
 	System.out.println("\n\ntotal amount is "+amt+"Rs");
+	System.out.println("Thank you for Shopping \n  Visit Again");
 	
 	return 0;
 	}
