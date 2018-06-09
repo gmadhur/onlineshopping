@@ -204,40 +204,89 @@ public class shopping {
 			*/
 	
 	public static void Books() {
-		int pro, qty,amt1;
+		int pro = 0, qty=0,amt1=0;
+		int i;
+		
 		Scanner s1 = new Scanner(System.in);
 		System.out.println("          BOOKS    ");
 		System.out.println("      WELLCOME         "+name);
 		do {
 			/**
-			*Display the Fashion  menu
+			*Display the Electronics  menu
 			*/
-		System.out.println("1.ABCD  = 100/-\n2.NOPQ = 1000/-\n3.exit ");
-			/**
-			*Accept input of the item from user
-			*/
-		System.out.println("Enter the product");
-		pro = s1.nextInt();
-		if(pro==3)
-			return;
-			/**
-			*Accept input quantity from the user 
-			*/
-		System.out.println("Enter the quantity");
-		qty=s1.nextInt();
-		if(pro==1)
-		{
-			amt1=qty*100;
-			amt=amt+amt1;
+			
+			System.out.println("1.Novel   2.Educational  3.exit");
+			int ch = s1.nextInt();
+			switch(ch)
+			{
+			case 1: System.out.println("Welcome to Novel section !");
+					System.out.println("1.half girlfriend - 350/- 2.One Indian women - 150/- 3.50 Shades of grey - 400/-   4.exit ");
+					System.out.println("Enter the product : ");
+					 pro = s1.nextInt();
+					if(pro==4)
+						return;
+					System.out.println("Enter the quantity : ");
+					qty=s1.nextInt();
+					if(pro==1)
+					{
+						amt1=qty*350;
+						amt=amt+amt1;
+						
+					}
+					else if(pro==2)
+					{
+						amt1=qty*150;
+						amt=amt+amt1;
+						
+					}
+					else if(pro==3)
+					{
+						amt1=qty*400;
+						amt=amt+amt1;
+					}
+					break;
+					
+			case 2:  System.out.println("Welcome to Educational Books section!");
+					System.out.println("1.Head First java - 300/- 2.Love with Robot - 250/- 3.Let us see- 500/-   4.exit ");
+					System.out.println("Enter the product : ");
+					pro = s1.nextInt();
+					if(pro==4)
+						return;
+					System.out.println("Enter the quantity : ");
+					qty=s1.nextInt();
+					if(pro==1)
+					{
+						amt1=qty*300;
+						amt=amt+amt1;
+				
+					}
+					else if(pro==2)
+					{
+						amt1=qty*250;
+						amt=amt+amt1;
+				
+					}
+					else if(pro==3)
+					{
+						amt1=qty*500;
+						amt=amt+amt1;
+					}
+					break;
+			case 3:return;		
+					
+			default : System.out.println("Enter a valid choice !  ");
+						break;
+			 
+					
+			}
+			
+			
+
+		}while(pro!=4);
+		 
 		}
-		else
-		{
-			amt1=qty*1000;
-			amt=amt+amt1;
-		}
-		}while(pro!=3);
 		
-	}
+		
 
 	/**
 	*Function for categories of sports
