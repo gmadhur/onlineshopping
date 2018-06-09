@@ -1,9 +1,10 @@
 /**
- * 
+ * @autho 
  */
 package shopping;
 
 import java.util.Scanner;
+
 
 public class shopping {
 
@@ -287,12 +288,12 @@ else
 			/**
 			*Display the Name and Customer number
 			*/
-	System.out.println("NAME:"+name+ "\tCUST No:"+custno);
+	System.out.println("\nNAME:"+name+ "\t\tCUST No:"+custno);
 			/**
 			*Display the total price
 			*/
 	System.out.println("\n\ntotal amount is "+amt+"Rs");
-	System.out.println("Thank you for Shopping \n  Visit Again");
+	System.out.println("Thank you for Shopping :)\n  Visit Again");
 	
 	return 0;
 	}
