@@ -1,10 +1,9 @@
 /**
- * @autho 
+ * @author The ERROR's
  */
 package shopping;
 
 import java.util.Scanner;
-
 
 public class shopping {
 
@@ -100,20 +99,11 @@ public class shopping {
 			}
 			
 			
-
-		}while(pro!=4);
+  	}while(pro!=4);
 		 
 		}
 		
-		
-		
-		 
-		
-		
-		
-		
-	
-			/**
+		/**
 			*Function for Category of  fashion 
 			*/
 	public static void Fashion() {
@@ -286,9 +276,7 @@ public class shopping {
 		 
 		}
 		
-		
-
-	/**
+		/**
 	*Function for categories of sports
 	*/
 
